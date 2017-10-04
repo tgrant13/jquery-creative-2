@@ -2,13 +2,16 @@
 <html>
 <head>
 	<title>CLEAN CHUCK NORRIS JOKES</title>
+  <link rel="stylesheet" type="text/css" href="ChuckyMcChuckface.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script
   src="http://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous">
 </script>
 <script type="text/javascript">
-  var arr = [261,450,24,169,183,185,246,273,278,294,340,380,390,434,49,104,141,371,524];
+  var arr = [261,450,24,169,183,185,246,273,278,294,340,380,390,434,49,104,141,371,524, 182, 441, 127, 132, 167, 303, 404, 61];
   $(function(){
     joke();
   });
@@ -34,10 +37,13 @@
 </script>
 </head>
 <body>
-<h1> THE LEGEND </h1>
-<img id="image" src="">
-<div id="caption"></div>
-<button id="new" onclick="joke()">New</button>
+<div class="text-center content">
+  <h1> THE LEGEND </h1>
+  <iframe src="https://giphy.com/embed/jVJmFAV8xbIys" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <div class="text" id="caption"></div>
+  <button class="btn btn-primary" id="new" onclick="joke()">New Joke</button>
+</div>
+
 
 </body>
 </html>
