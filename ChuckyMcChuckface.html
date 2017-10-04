@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChuckyMcChuckface</title>
+	<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var myurl= "http://dynamic.xkcd.com/api-0/jsonp/comic";
+  		console.log(myurl);
+  		$.ajax({
+    		url : myurl,
+    		crossDomain: true,
+    		dataType : "jsonp",
+    		success : function(parsed_json) {
+      			console.log(parsed_json);
+      			$("#comic").html(JSON.stringify(parsed_json["alt"]));
+      			$("#image").attr("src", parsed_json["img"]);
+    		}
+  		});
+	});
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>
