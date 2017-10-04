@@ -8,25 +8,30 @@
   crossorigin="anonymous">
 </script>
 <script type="text/javascript">
-	$(document).ready(function(){
-		var myurl= "http://dynamic.xkcd.com/api-0/jsonp/comic";
-  		console.log(myurl);
-  		$.ajax({
-    		url : myurl,
-    		crossDomain: true,
-    		dataType : "jsonp",
-    		success : function(parsed_json) {
-      			console.log(parsed_json);
-      			$("#comic").html(JSON.stringify(parsed_json["alt"]));
-      			$("#image").attr("src", parsed_json["img"]);
-    		}
-  		});
-	});
+  $(function(){
+    joke();
+  });
+
+  function joke() {
+    var myurl= "http://api.icndb.com/jokes/random?exclude=[explicit]";
+      console.log(myurl);
+      $.ajax({
+        url : myurl,
+        crossDomain: true,
+        dataType : "json",
+        success : function(parsed_json) {
+            console.log(parsed_json);
+            $("#caption").html(JSON.stringify(parsed_json["value"]["joke"]));
+        }
+      });
+  }
 </script>
 </head>
 <body>
 
-
+<img id="image" src="">
+<div id="caption"></div>
+<button id="new" onclick="joke()">New</button>
 
 </body>
 </html>
