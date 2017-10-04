@@ -21,7 +21,12 @@
         dataType : "json",
         success : function(parsed_json) {
             console.log(parsed_json);
-            $("#caption").html(JSON.stringify(parsed_json["value"]["joke"]));
+            var number = parsed_json["value"]["id"];
+            if (arr.includes(number)){
+                joke();
+            } else{
+              $("#caption").html(JSON.stringify(parsed_json["value"]["joke"]));
+            }
         }
       });
   }
